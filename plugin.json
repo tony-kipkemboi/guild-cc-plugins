@@ -1,0 +1,12 @@
+{
+  "name": "insights-video",
+  "description": "Generate a polished Remotion video showcasing your Claude Code usage insights with Claude branding, animated stats, and background music.",
+  "version": "1.0.0",
+  "skills": [
+    {
+      "name": "insights-video",
+      "path": "skills/insights-video",
+      "description": "Generate a personalized Claude Code insights video from your /insights data. Creates a 30-second animated video with your stats, project areas, friction points, and interaction style. Includes Claude branding and background music."
+    }
+  ]
+}
