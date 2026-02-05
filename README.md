@@ -1,45 +1,37 @@
-# Guild Plugins
+# Guild CC Plugins
 
 Internal marketplace of Claude Code plugins for the Guild team.
 
-## Plugins
+## Install
+
+```bash
+claude plugin add https://github.com/tonykipkemboi/guild-cc-plugins
+```
+
+## Available Skills
 
 ### insights-video
 
-Generate a polished 30-second animated video showcasing your Claude Code usage insights. Features Claude branding, animated stats, project areas chart, friction analysis, and background music.
+Generate a polished 30-second animated video showcasing your Claude Code usage insights.
 
-**What it does:**
 - Reads your `/insights` data automatically
-- Scaffolds a full Remotion project with your personalized stats
-- Renders a 1080x1080 animated MP4 video with:
-  - Animated stats dashboard (sessions, messages, hours, commits)
-  - Project areas bar chart
-  - "What's Working" highlights
-  - Friction points analysis
-  - Your interaction style quote
-  - Satisfaction rate closing card
-  - Background music with fade in/out
+- Scaffolds a Remotion project with personalized stats
+- Renders a 1080x1080 MP4 with animated stats, charts, friction analysis, and background music
 
-**Prerequisites:**
-- Node.js installed
-- Run `/insights` at least once (generates the data)
+**Prerequisites:** Node.js, run `/insights` at least once
 
-**Install:**
-```bash
-claude plugin add https://github.com/tonykipkemboi/guild-plugins
-```
+**Usage:** `/insights-video`
 
-**Usage:**
-```
-/insights-video
-```
+## Adding a New Skill
 
-That's it. Everything else is automatic.
+1. Create `skills/<skill-name>/` with a `SKILL.md`
+2. Add skill-specific assets to `skills/<skill-name>/assets/`
+3. Register in `plugin.json` under the `skills` array
+4. Run `./scripts/validate-plugin.sh` to verify
+5. Open a PR — CI will validate automatically
 
-## Adding New Plugins
-
-Create a new directory with a `plugin.json` manifest and add your skills, commands, hooks, or agents inside.
+See [CLAUDE.md](CLAUDE.md) for coding conventions and contribution guidelines.
 
 ## License
 
-Internal use only - Guild team.
+Internal use only — Guild team.

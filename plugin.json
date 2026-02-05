@@ -1,6 +1,6 @@
 {
-  "name": "insights-video",
-  "description": "Generate a polished Remotion video showcasing your Claude Code usage insights with Claude branding, animated stats, and background music.",
+  "name": "guild-cc-plugins",
+  "description": "Guild's internal marketplace of Claude Code plugins. Skills, commands, and agents for the team.",
   "version": "1.0.0",
   "skills": [
     {
