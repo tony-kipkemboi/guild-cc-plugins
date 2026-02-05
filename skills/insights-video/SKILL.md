@@ -115,7 +115,7 @@ Config.setOverwriteOutput(true);
 Create the `public/` directory first, then copy the bundled background music:
 
 ```bash
-cp ${CLAUDE_PLUGIN_ROOT}/assets/background-music.mp3 <project>/public/background-music.mp3
+cp ${CLAUDE_PLUGIN_ROOT}/skills/insights-video/assets/background-music.mp3 <project>/public/background-music.mp3
 ```
 
 ### Step 5: Generate Source Files

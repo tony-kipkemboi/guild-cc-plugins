@@ -7,10 +7,11 @@ This is Guild's internal marketplace of Claude Code plugins. Each plugin lives i
 ```
 guild-cc-plugins/
 ├── plugin.json              # Root manifest (registers all plugins)
-├── assets/                  # Shared assets (audio, images, fonts)
+├── scripts/                 # Validation and CI scripts
 ├── skills/
 │   └── <skill-name>/
-│       └── SKILL.md         # Skill instructions for Claude
+│       ├── SKILL.md         # Skill instructions for Claude
+│       └── assets/          # Skill-specific assets (audio, images, fonts)
 ├── commands/                # Slash commands (if any)
 ├── hooks/                   # Lifecycle hooks (if any)
 └── agents/                  # Subagent definitions (if any)
@@ -21,7 +22,7 @@ guild-cc-plugins/
 1. Create a directory under `skills/<skill-name>/`
 2. Write a `SKILL.md` with clear step-by-step instructions
 3. Update `plugin.json` to register the new skill in the `skills` array
-4. Add any required assets to `assets/`
+4. Add any required assets to `skills/<skill-name>/assets/`
 5. Update `README.md` with the new skill's description
 
 ## Writing Good Skills
