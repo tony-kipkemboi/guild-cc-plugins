@@ -1,14 +1,22 @@
-# Insights Video
-
-Generate a polished 30-second animated video showcasing your Claude Code usage insights. Features Claude branding, animated stats, project areas chart, friction analysis, and background music.
-
-**Trigger phrases:** "insights video", "generate insights video", "make a video of my insights"
-
+---
+name: Insights Video
+description: >
+  This skill should be used when the user asks to "generate an insights video",
+  "make a video of my insights", "create an insights video", "insights video",
+  "visualize my Claude Code stats", or wants to turn their /insights data into
+  a shareable animated video. Generates a polished 30-second Remotion video with
+  Claude branding, animated stats, project areas chart, friction analysis, and
+  background music.
+version: 1.0.0
 ---
 
-## Instructions for Claude
+# Insights Video
 
-When this skill is invoked, execute the ENTIRE pipeline automatically with no user interaction needed (except for choosing the project location). Follow these steps in order:
+Generate a polished 30-second animated video showcasing Claude Code usage insights. Features Claude branding, animated stats, project areas chart, friction analysis, and background music.
+
+## Pipeline
+
+Execute the entire pipeline automatically with no user interaction needed (except for choosing the project location). Complete all steps in order:
 
 ### Step 1: Read and Parse Insights Data
 
@@ -29,7 +37,7 @@ Calculate:
 - `satisfaction_rate = likely_satisfied / (likely_satisfied + dissatisfied) * 100`
 - `total_hours = (total sessions * median_response_time_seconds) / 3600` (approximate from report data)
 
-If `~/.claude/usage-data/` does not exist, tell the user to run `/insights` first and stop execution.
+If `~/.claude/usage-data/` does not exist, display a message that `/insights` must be run first and stop execution.
 
 ### Step 2: Ask Where to Create the Project
 
@@ -1473,10 +1481,10 @@ Run `open <project>/out/insights.mp4` (macOS) to open the rendered video.
 
 ## Final Notes
 
-After successful completion, tell the user:
+After successful completion, display a summary:
 
-- The video has been rendered to `<project>/out/insights.mp4`
-- They can run `npm start` in the project directory to open Remotion Studio and preview/edit the video
-- They can run `npm run render` to re-render after making changes
-- The video is 1080x1080 at 30fps, approximately 30 seconds long
-- The video includes personalized insights data, animated statistics, project areas chart, friction analysis, and background music
+- Video rendered to `<project>/out/insights.mp4`
+- Run `npm start` in the project directory to open Remotion Studio and preview/edit
+- Run `npm run render` to re-render after making changes
+- Format: 1080x1080 at 30fps, approximately 30 seconds long
+- Content: personalized insights data, animated statistics, project areas chart, friction analysis, and background music
